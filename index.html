@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My ToDo List</title>
+    <link rel="stylesheet" href="style.css" charset="utf-8">
+  </head>
+  <body>
+    <header>
+      <h1>My ToDo List</h1>
+    </header>
+    <main>
+      <div ng-controller="PeopleCtrl as peopleListController">
+        <div ng-repeat="person in peopleListController.people">
+          <h2>{{person.name}}</h2>
+          <ul ng-controller="TodoListCtrl as todoListController">
+            <li ng-repeat="todo in person.todos">
+              <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
+            </li>
+            <li><input type="text" ng-model="todoListController.todoToAdd"><a href="" ng-click="todoListController.addTodo(person)"> Add Task</a></li>
+          </ul>
+        </div>
+        <div>
+          <input type="text" ng-model="peopleListController.nameToAdd"><a href="" ng-click="peopleListController.addPerson(peopleListController.nameToAdd)">Add Person</a>
+        </div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "persons": [
+    {
+      "name": "Isaac",
+      "id": 1
+    }
+  ],
+  "todos": [
+    {
+      "completed": false,
+      "text": "fanzy",
+      "personId": 1,
+      "id": 1
+    },
+    {
+      "completed": false,
+      "text": "Fanzy",
+      "personId": 1,
+      "id": 2
+    },
+    {
+      "completed": false,
+      "text": "Frank",
+      "personId": 1,
+      "id": 3
+    },
+    {
+      "completed": false,
+      "text": "Frank",
+      "personId": 1,
+      "id": 4
+    },
+    {
+      "completed": false,
+      "text": "Fanzciz",
+      "personId": 1,
+      "id": 5
+    }
+  ]
+}
